@@ -21,42 +21,15 @@ class Register extends React.Component {
     this.setState({[name]: value})
   }
   render() {
-    const { email, password, passwordConfirmation, fname, lname } = this.state;
+    const { email, password, passwordConfirmation, } = this.state;
 
     return (
         <>
        <h1>Welcome To Dungeon Masters!</h1>
 
-        <Card style ={{width: '36rem', float: 'right'}}>
+        <Card style ={{width: '25rem', float: 'right'}}>
             <Card.Body>
             <Form onSubmit={this.handleSubmit}>
-                <Form.Row>
-                    <Form.Group  controlId="formGridFirstName">
-                    <Form.Label>First Name</Form.Label>
-                    <Form.Control 
-                        autoFocus
-                        required
-                        type="text" 
-                        placeholder="First Name" 
-                        label="fname"
-                        name="fname"
-                        value={fname}
-                        onChange={this.handleChange}
-                    />
-                    </Form.Group>
-
-                    <Form.Group controlId="formGridLastName">
-                    <Form.Label>Last Name</Form.Label>
-                    <Form.Control 
-                         type="text" 
-                         placeholder="Last Name" 
-                         label="lname"
-                         name="lname"
-                         value={lname}
-                         onChange={this.handleChange}
-                    />
-                    </Form.Group>
-                </Form.Row>   
 
                 <Form.Group controlId="formGroupEmail">
                     <Form.Label>Email address</Form.Label>
