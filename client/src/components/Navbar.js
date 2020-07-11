@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react'
-import { Link, withRouter, } from 'react-router-dom'
+import { Menu, } from 'semantic-ui-react';
+import { Link, withRouter, } from 'react-router-dom';
 
 class Navbar extends React.Component {
 
@@ -12,13 +12,13 @@ class Navbar extends React.Component {
       return (
         <>
          <Menu.Menu position='left'>
-          <Link to='/dashboard'>
+          {/* <Link to='/dashboard'>
             <Menu.Item
               id='dashboard'
               name='dashboard'
               active={location.pathname === '/dashboard'}
             />
-          </Link>
+          </Link> */}
         </Menu.Menu>
         <Menu.Menu position='right'>
           
@@ -40,13 +40,7 @@ class Navbar extends React.Component {
               active={location.pathname === '/login'}
             />
           </Link>
-          <Link to='/'>
-            <Menu.Item
-              id='register'
-              name='register'
-              active={location.pathname === '/register'}
-            />
-          </Link>
+          
         </Menu.Menu>
       )
     }

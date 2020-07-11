@@ -25,13 +25,9 @@ class Register extends React.Component {
 
     return (
         <>
-        <br/>
-        <h1>Welcome to your Digital GloveBox</h1>
-        <p>A place for you to store all of your important vehicle records</p>
-        <br/>
-        <br/>
+       <h1>Welcome To Dungeon Masters!</h1>
 
-        <Card style ={{width: '36rem'}}>
+        <Card style ={{width: '36rem', float: 'right'}}>
             <Card.Body>
             <Form onSubmit={this.handleSubmit}>
                 <Form.Row>
