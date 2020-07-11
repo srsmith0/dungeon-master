@@ -1,6 +1,6 @@
 import React from "react";
 // import { Button, Form, Segment, Header } from "semantic-ui-react";
-import { AuthConsumer } from "./providers/AuthProvider";
+import { AuthConsumer } from "../providers/AuthProvider";
 import {Form, Card, Button} from 'react-bootstrap'
 
 
