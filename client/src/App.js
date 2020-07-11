@@ -12,14 +12,11 @@ function App() {
   return (
     <div>
       <Navbar/>
-      
-      <Container>
         <Switch>
         <Route exact path='/' component={Register} />
         <Route exact path='/login' component={Login}/>
         <Route exact path='/character' component={ViewCharacter} />
         </Switch>
-      </Container>
 
     </div>
   );

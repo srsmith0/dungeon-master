@@ -2,11 +2,12 @@ class Api::CharactersController < ApplicationController
 
 
   def index
-    render json: current_user.characters.all 
+    render json: Character.find(params[:user_id]).all
   end
 
   def show
-    character = current_user.characters.find(params[:character_id])
+    character = Character.find(params[:id])
+    render json: character
   end
 
   def create 
@@ -16,6 +17,8 @@ class Api::CharactersController < ApplicationController
   end
 
   def destroy
+    render json: Character.find(params[:id]).destroy
+
   end
 
   def inventory
