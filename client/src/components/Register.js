@@ -25,7 +25,7 @@ class Register extends React.Component {
     const { email, password, passwordConfirmation, } = this.state;
 
     return (
-        <div style={background}>
+        <div>
        <h1>Welcome To Dungeon Masters!</h1>
 
         <Card style ={{width: '25rem', float: 'right'}}>
@@ -90,10 +90,10 @@ export default class ConnectedRegister extends React.Component {
   }
 }
 
-const background = {
-  backgroundImage: `url(${image})`,
-  backgroundRepeat: 'noRepeat',
-  backgroundSize: 'cover',
-  width: '1000px',
-  height: '1000px',
-}
+// const background = {
+//   backgroundImage: `url(${image})`,
+//   backgroundRepeat: 'noRepeat',
+//   backgroundSize: 'cover',
+//   width: '1000px',
+//   height: '1000px',
+// }

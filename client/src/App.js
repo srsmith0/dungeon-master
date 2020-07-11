@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import ProtectRoute from './components/ProtectedRoute';
+import ProtectedRoute from './components/ProtectedRoute';
 import { Switch, Route, } from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 import Navbar from './components/Navbar';

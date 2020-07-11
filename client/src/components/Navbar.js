@@ -14,11 +14,11 @@ function Navbar() {
       {user ? (
         <>
           <Menu.Menu position='left'>
-          <Link to='/charProfile'>
+          <Link to='/CharsHome'>
             <Menu.Item
               id='charProfile'
-              name='charProfile'
-              active={location.pathname === '/charProfile'}
+              name='Characters'
+              active={location.pathname === '/CharsHome'}
             />
           </Link>
         </Menu.Menu>

@@ -4,7 +4,7 @@ import { Button } from 'semantic-ui-react';
 import axios from 'axios';
 import { render } from 'react-dom';
 
-const CharsHome = () => {
+const CharsHome = (props) => {
   const [char, setChar] = useState([])
 
   // function getChar () {
@@ -46,7 +46,7 @@ const CharsHome = () => {
   // }
 
     return (
-      <div>
+      <div style={{color:"white"}}>
         <br />
         <h1 align="center">Character's Home Page</h1>
         <hr />
@@ -54,7 +54,7 @@ const CharsHome = () => {
         <br />
         {char.map(c => (
         <h3><Link to={{
-          pathname:'/ViewCharacter',
+          pathname:'/character',
           showProps:{ ...c}
         }}>
           {c.name}

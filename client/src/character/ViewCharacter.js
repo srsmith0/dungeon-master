@@ -28,35 +28,36 @@ function getChar () {
 }
 
 function getArmor () {
-  axios.get(`/api/armor/1`)
+  debugger;
+  axios.get(`/api/armor/2`)
   .then((res) => {
     setArmor(res.data)
   })
 };
 
 function getWeapon () {
-  axios.get(`/api/weapons/1`)
+  axios.get(`/api/weapons/2`)
   .then((res) => {
     setWeapons(res.data)
   })
 };
 
 function getSkills () {
-  axios.get(`/api/skills/1`)
+  axios.get(`/api/skills/2`)
   .then((res) => {
     setSkills(res.data)
   })
 };
 
 function getInventory () {
-  axios.get(`api/inventory/1`)
+  axios.get(`api/inventory/2`)
   .then((res) => {
     setInventory(res.data)
   })
 };
 
 return (
-  <div>
+  <div style={{color:'white'}}>
     <h1>Character Sheet</h1>
   <h3>Name: {char.name} Race: {char.race} Class: {char.character_class} Level: {char.level} Alignment: {char.alignment} Experience Points: {char.xp}</h3>
   <br />
