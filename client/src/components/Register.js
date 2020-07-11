@@ -25,9 +25,9 @@ class Register extends React.Component {
 
     return (
         <>
-       
+       <h1>Welcome To Dungeon Masters!</h1>
 
-        <Card style ={{width: '36rem'}}>
+        <Card style ={{width: '36rem', float: 'right'}}>
             <Card.Body>
             <Form onSubmit={this.handleSubmit}>
                 <Form.Row>
