@@ -12,9 +12,11 @@
 # Faker::Games::DnD.alignment #=> "Lawful Neutral"
 # Faker::Games::ElderScrolls.name #=> Babette Brill
 
+
 # weapons = ["greatsword", "sword", "dagger", "longbow", "shortbow", "warhammer", "staff"]
 # armor = ["leather", "hide", "chainmail"]
 race = ["Dwarf", "Human", "Halfling", "High Elf", "Wood Elf", "Half Orc",]
+
 3.times do |x|
   User.create(
     email: "#{x}@test.com",
