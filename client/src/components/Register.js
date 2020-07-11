@@ -2,6 +2,7 @@ import React from "react";
 // import { Button, Form, Segment, Header } from "semantic-ui-react";
 import { AuthConsumer } from "../providers/AuthProvider";
 import {Form, Card, Button} from 'react-bootstrap'
+import image from './background.jpg'
 
 
 class Register extends React.Component {
@@ -24,7 +25,7 @@ class Register extends React.Component {
     const { email, password, passwordConfirmation, } = this.state;
 
     return (
-        <>
+        <div style={background}>
        <h1>Welcome To Dungeon Masters!</h1>
 
         <Card style ={{width: '25rem', float: 'right'}}>
@@ -72,7 +73,7 @@ class Register extends React.Component {
             </Form>
             </Card.Body>
         </Card>
-        </>
+        </div>
 
     );
   }
@@ -87,4 +88,12 @@ export default class ConnectedRegister extends React.Component {
       </AuthConsumer>
     )
   }
+}
+
+const background = {
+  backgroundImage: `url(${image})`,
+  backgroundRepeat: 'noRepeat',
+  backgroundSize: 'cover',
+  width: '1000px',
+  height: '1000px',
 }

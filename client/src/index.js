@@ -8,7 +8,9 @@ import { AuthProvider } from './providers/AuthProvider'
 import 'semantic-ui-css/semantic.min.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { initMiddleware, } from 'devise-axios';
+
 initMiddleware();
+
 ReactDOM.render(
   <AuthProvider>
     <BrowserRouter>
