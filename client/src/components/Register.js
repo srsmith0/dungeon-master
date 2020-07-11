@@ -1,6 +1,6 @@
 import React from "react";
 // import { Button, Form, Segment, Header } from "semantic-ui-react";
-import { AuthConsumer } from "./providers/AuthProvider";
+import { AuthConsumer } from "../providers/AuthProvider";
 import {Form, Card, Button} from 'react-bootstrap'
 
 
@@ -25,11 +25,7 @@ class Register extends React.Component {
 
     return (
         <>
-        <br/>
-        <h1>Welcome to your Digital GloveBox</h1>
-        <p>A place for you to store all of your important vehicle records</p>
-        <br/>
-        <br/>
+       
 
         <Card style ={{width: '36rem'}}>
             <Card.Body>
