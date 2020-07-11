@@ -12,13 +12,13 @@ class Navbar extends React.Component {
       return (
         <>
          <Menu.Menu position='left'>
-          <Link to='/dashboard'>
+          {/* <Link to='/dashboard'>
             <Menu.Item
               id='dashboard'
               name='dashboard'
               active={location.pathname === '/dashboard'}
             />
-          </Link>
+          </Link> */}
         </Menu.Menu>
         <Menu.Menu position='right'>
           
@@ -40,13 +40,7 @@ class Navbar extends React.Component {
               active={location.pathname === '/login'}
             />
           </Link>
-          <Link to='/register'>
-            <Menu.Item
-              id='register'
-              name='register'
-              active={location.pathname === '/register'}
-            />
-          </Link>
+          
         </Menu.Menu>
       )
     }
