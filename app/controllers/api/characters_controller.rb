@@ -1,8 +1,9 @@
 class Api::CharactersController < ApplicationController
 
 
-  def index
-    render json: Character.find(params[:user_id]).all
+
+   def index
+    render json: User.find(params[:user_id]).characters.all
   end
 
   def show

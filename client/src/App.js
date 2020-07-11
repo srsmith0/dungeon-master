@@ -7,19 +7,33 @@ import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
 import ViewCharacter from './character/ViewCharacter';
+import CharsHome from './components/CharsHome';
+import dnd from './components/dnd.png'
+import Profile from './components/Profile'
+
 
 function App() {
   return (
-    <div>
+    <div style={{
+      backgroundImage: `url(${dnd})`,
+      backgroundSize: 'cover',
+      overflow: 'hidden',
+      minHeight: '800px',
+     }}
+    >
       <Navbar/>
+      <Container>
         <Switch>
+        <ProtectedRoute exact path='/profile' component={Profile} /> 
         <Route exact path='/' component={Register} />
         <Route exact path='/login' component={Login}/>
         <Route exact path='/character' component={ViewCharacter} />
+        <Route exact path='/charshome' component={CharsHome} />
         </Switch>
+      </Container>
 
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
