@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'api/auth'
   namespace :api do
-  get 'armor', to: 'characters#armor'
-  get 'weapons', to: 'characters#weapons'
-  get 'inventory', to: 'characters#inventory'
-  get 'skills', to: 'characters#skills'
+  get 'armor/:character_id', to: 'characters#armor'
+  get 'weapons/:character_id', to: 'characters#weapons'
+  get 'inventory/:character_id', to: 'characters#inventory'
+  get 'skills/:character_id', to: 'characters#skills'
   end
 end
