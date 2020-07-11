@@ -6,6 +6,7 @@ import { Container } from 'semantic-ui-react';
 import Navbar from './components/Navbar';
 import Login from './components/Login';
 import Register from './components/Register';
+import CharsHome from './components/CharsHome';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Switch>
         <Route exact path='/' component={Register} />
         <Route exact path='/login' component={Login}/>
+        <Route exact path='/charshome' component={CharsHome} />
         </Switch>
       </Container>
 

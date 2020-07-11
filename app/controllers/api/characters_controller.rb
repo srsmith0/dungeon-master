@@ -1,4 +1,10 @@
 class Api::CharactersController < ApplicationController
+
+  def index
+    render json: User.find(params[:user_id]).characters.all
+    # render json: Character.all.find(params[:user_id])
+  end
+
   def inventory
     render json: Character.set_inventory(params[:character_id])
   end
