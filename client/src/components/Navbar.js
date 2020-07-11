@@ -1,37 +1,52 @@
-import React from 'react';
-import { AuthConsumer, } from "../providers/AuthProvider";
-import { Menu, } from 'semantic-ui-react';
-import { Link, withRouter, } from 'react-router-dom';
+import React, {useContext} from 'react'
+import {Link, useLocation, useHistory} from 'react-router-dom'
+import {Menu} from 'semantic-ui-react'
 
-class Navbar extends React.Component {
+import {AuthContext} from "../providers/AuthProvider"
 
-  NavItems = () => {
-    const { auth: { user, handleLogout, }, location, } = this.props;
+function Navbar() {
+  const {user, handleLogout} = useContext(AuthContext)
+  const location = useLocation()
+  const history = useHistory()
 
-    if (user) {
-      return (
+  return (
+    <Menu>
+      {user ? (
         <>
-         <Menu.Menu position='left'>
-          {/* <Link to='/dashboard'>
+          <Menu.Menu position='left'>
+          <Link to='/charProfile'>
             <Menu.Item
-              id='dashboard'
-              name='dashboard'
-              active={location.pathname === '/dashboard'}
+              id='charProfile'
+              name='charProfile'
+              active={location.pathname === '/charProfile'}
             />
-          </Link> */}
+          </Link>
         </Menu.Menu>
         <Menu.Menu position='right'>
-          
-          <Menu.Item
-            name='logout'
-            onClick={() => handleLogout(this.props.history)}
-          />
+         <Link to='/profile'>
+           <Menu.Item
+             id='profile'
+             name='profile'
+             active={location.pathname === '/profile'}
+           />
+         </Link>
+         <Menu.Item
+           name='logout'
+           onClick={() => handleLogout(history)}
+         />
         </Menu.Menu>
-       
-        </>
-      )
-    } else {
-      return (
+       </>
+      ) : (
+        <>
+          <Menu.Menu position='left'>
+          <Link to='/'>
+            <Menu.Item
+              id='register'
+              name='Home'
+              active={location.pathname === '/'}
+            />
+          </Link>
+          </Menu.Menu>
         <Menu.Menu position='right'>
           <Link to='/login'>
             <Menu.Item
@@ -40,34 +55,11 @@ class Navbar extends React.Component {
               active={location.pathname === '/login'}
             />
           </Link>
-          
         </Menu.Menu>
-      )
-    }
-  }
+      </>
+    )}
+    </Menu>
+  )
+}
 
-
-  render() {
-    return (
-      <div>
-        <Menu>
-          { this.NavItems() }
-        </Menu>
-      </div>
-    );
-  };
-};
-
-export class ConnectedNavbar extends React.Component {
-  render() {
-    return (
-      <AuthConsumer>
-        { auth =>
-          <Navbar {...this.props} auth={auth} />
-        }
-      </AuthConsumer>
-    );
-  };
-};
-
-export default withRouter(ConnectedNavbar);
+export default Navbar
